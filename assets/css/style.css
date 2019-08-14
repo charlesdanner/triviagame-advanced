@@ -54,3 +54,11 @@ h3{
     margin-bottom: 20px;
 }
 
+#reset-game{
+    display: none;
+}
+
+.results{
+    display: none;
+}
+
