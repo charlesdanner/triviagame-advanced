@@ -18,8 +18,9 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="top">
-                    <h1 id="header">Totally Trivial Sports Trivia</h1>
-                    <h3 class="timer" id="timeLeft"></h3>
+                    <h1 id="header"><b>Totally Trivial Sports Trivia</b></h1>
+                    <h3 class="timer" id="timeLeft">You have blah seconds left</h3>
+
                 </div>
             </div>
         </div>
@@ -30,21 +31,37 @@
                 <button type="button" class="btn btn-primary btn-lg" id="start">Start the Quiz</button>
             </div>
         </div>
-
-
-
-        <div class="question text-center" id="question0">
-            <h3>What is Mark Sanchez most famous for?</h3>
-            <ul>
-                <li class="answers" id="incorrect" value="a">Winning the Super Bowl</li>
-                <li class="answers" id="incorrect" value="b">Having a great smile</li>
-                <li class="answers" id="incorrect" value="c">Having the most touchdowns in a single season</li>
-                <li class="answers" id="correct" value="d">Butt Fumble</li>
-            </ul>
+        <div class="verdict">
+            <h3 id="result"></h3>
+            <a id="gif"></a>
         </div>
 
-        <div class="question text-center" id="question1">
-            <h3>What sport did Larry Bird play professionally?</h3>
+  
+
+        
+            <h3 class="question question0 text-center"><b>What is Mark Sanchez most famous for?</b></h3>
+            <ul class="question question0 text-center">
+                <div class="question question0 text-center" id="incorrect">
+                    <li class="answers" id="incorrect" value="a">Winning the Super Bowl</li>
+                </div>
+                <div class="question question0 text-center" id="incorrect">
+                    <li class="answers" id="incorrect" value="b">Having a great smile</li>
+                </div>
+                <div class="question question0 text-center" id="incorrect">
+                    <li class="answers" id="incorrect" value="c">Having the most touchdowns in a single season</li>
+                </div>
+                <div class="question question0 text-center" id="correct">
+                    <li class="answers" id="correct" value="d">Butt Fumble</li>
+                </div>
+
+
+
+
+            </ul>
+
+
+        <div class="question question1 text-center">
+            <h3><b>What sport did Larry Bird play professionally?</b></h3>
             <ul>
                 <li class="answers" id="incorrect" value="a">Hockey</li>
                 <li class="answers" id="incorrect" value="b">Baseball</li>
@@ -53,8 +70,8 @@
             </ul>
         </div>
 
-        <div class="question text-center" id="question2">
-            <h3>What college did Shaquille O'neal play basketball for?</h3>
+        <div class="question question2 text-center">
+            <h3><b>What college did Shaquille O'neal play basketball for?</b></h3>
             <ul>
                 <li class="answers" id="correct" value="a">Louisiana State University</li>
                 <li class="answers" id="incorrect" value="b">Stanford University</li>
@@ -63,8 +80,8 @@
             </ul>
         </div>
 
-        <div class="question text-center" id="question3">
-            <h3>The infamous 'Malice in the Palace' refers to what event?</h3>
+        <div class="question question3 text-center">
+            <h3><b>The infamous 'Malice in the Palace' refers to what event?</b></h3>
             <ul>
                 <li class="answers" id="correct" value="a">Professional athletes jumping into the bleachers to fight out
                     of shape fans who were throwing drinks at them</li>
@@ -76,8 +93,8 @@
             </ul>
         </div>
 
-        <div class="question text-center" id="question4">
-            <h3>Bounty Gate refers to what?</h3>
+        <div class="question question4 text-center">
+            <h3><b>Bounty Gate refers to what?</b></h3>
             <ul>
                 <li class="answers" id="incorrect" value="a">Dogg the Bounty Hunter's short lived WWE career</li>
                 <li class="answers" id="correct" value="b">New Orleans Saints coaches financially incentivizing
@@ -89,13 +106,13 @@
             </ul>
         </div>
 
-        <div class="question text-center" id="question5">
-            <h3>The Banana Slug is the mascot of which college?</h3>
+        <div class="question question5 text-center">
+            <h3><b>Who won the AP defensive player of the year award in the NFL in 2019?</b></h3>
             <ul>
-                <li class="answers" id="incorrect" value="a">University of Alabama Birmingham</li>
-                <li class="answers" id="incorrect" value="b">University of Samoa</li>
-                <li class="answers" id="incorrect" value="c">Florida Gulf Coast University</li>
-                <li class="answers" id="correct" value="d">UC Santa Cruz</li>
+                <li class="answers" id="incorrect" value="a">Von Miller</li>
+                <li class="answers" id="incorrect" value="b">Luke Keuchly</li>
+                <li class="answers" id="incorrect" value="c">Tom Brady</li>
+                <li class="answers" id="correct" value="d">Aaron Donald</li>
             </ul>
         </div>
 

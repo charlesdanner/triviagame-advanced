@@ -1,16 +1,32 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 .container{
     background-color: grey;
     margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 40px;
 }
 
 .question{
     margin-top: 40px;
+    display: none;
 
+}
+
+.verdict{
+    display: none;
 }
 
 #header{
     margin-top: 20px;
     margin-bottom: 20px;
+    color: white;
+}
+
+h3{
+    color: white;
 }
 
 .timer{
@@ -21,5 +37,20 @@
     font-size: 25px;
     margin-top: 10px;
     margin-bottom: 20px;
-    width: 100%;
+    
 }
+
+.answers:hover{
+    background-color: gold;
+    color: navy;
+    font-weight: bolder;
+    border-style: solid;
+    border-color: navy;
+    border-width: 2px;
+
+}
+
+#result{
+    margin-bottom: 20px;
+}
+
