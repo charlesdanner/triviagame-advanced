@@ -23,9 +23,12 @@ $(document).ready(function () {
         clearTimeout(questionTimerOut)       //clears timeout and interval, hides the last question, populates the DOM with the verdict tab 
         $(".question" + currentQuestion).hide();        //gives the verdict tab its different attributes, resets the timeLeft variable, shows the correct answer, and runs the nextQuestion function at the end 
         $(".verdict").show();
+        
         timeLeft = 20;
         $("#correctAnswer").html(answerArr[currentQuestion])
         $("#gif").html("<img src='assets/images/question" + currentQuestion + ".gif'>")
+        $("#result").css({"font-size": "40px", "margin-bottom": "20px"});
+        $("#correctAnswer").css({"font-size": "30px", "margin-bottom": "20px", "font-weight": "bolder"});
         currentQuestion++
         nextQuestion();
         $("#timeLeft").hide()
@@ -39,7 +42,12 @@ $(document).ready(function () {
                 $(".results").show();
                 $("#correct-answers").html("Questions answered correctly: " + correct);
                 $("#incorrect-answers").html("Questions answered incorrectly: " + incorrect);
-                $("#unanswered-questions").html("Questions left unanswered: " + unanswered)
+                $("#unanswered-questions").html("Questions left unanswered: " + unanswered);
+                $("#congratulations").css({"color":"gold", "font-weight": "bolder"});
+                $("#correct-answers").css({"margin-bottom": "10px"});
+                $("incorrect-answers").css({"margin-bottom": "10px"});
+                $("#unanswered-questions").css({"margin-bottom": "10px"});
+                $("#gif").css({"margin-bottom": "40px"});
             }, 6000)
         }
         else {
@@ -52,9 +60,10 @@ $(document).ready(function () {
 
     function newQuestion() {
         $(".question" + currentQuestion).show()
-        $(".question" + currentQuestion).css({ "width": "600px", "margin": "auto" })     //sets css to whichever question is populated so it doesn't fill the entire                 
-        $("#timeLeft").show()                                                           //populates the DOM with the next question which is based on a incrementing integer,
-        $("#timeLeft").html("Time remaining: 20 seconds")         //puts the timeLeft element back on the screen to be run.
+        $(".question" + currentQuestion).css({ "margin": "auto", "margin":"20px", "text-align": "center" })  //put this css in jquery because putting it in vanilla css would make it not run these parameters. I think its because they're default setting is set to display:none
+                                                                                                                //sets css to whichever question is populated so it doesn't fill the entire                 
+        $("#timeLeft").show()                                                                                   //populates the DOM with the next question which is based on a incrementing integer,
+        $("#timeLeft").html("Time remaining: 20 seconds")                                                       //puts the timeLeft element back on the screen to be run.
         domIntervalDisplay = setInterval(timeLeftFunction, 1000);    //interval set to the timeLeft function which counts down every second per the 1000
         questionTimerOut = setTimeout(function () {                  //sets a timeout function that will run verdict and increment the unanswered variable by one if not reset
             unanswered++;
@@ -79,6 +88,7 @@ $(document).ready(function () {
     $("#start-game").on("click", function () {
         $("#start-game").hide();   //when users press the start game button it hides itself and runs the newQuestion function to begin populating the screen
         newQuestion();
+        $(".instructions").hide();
     })
 
     $("#reset").on("click", function (e) {

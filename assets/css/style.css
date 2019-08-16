@@ -2,30 +2,74 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background: url("../images/fieldstripes.jpg");
 }
+
+#start-game{
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+}
 .container{
     background: url("../images/blue-slate.jpg");
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 20px;
     text-align: center;
-    padding-bottom: 40px;
     color: white;
     max-width: 800px;
+    margin-bottom: 60px;
 }
 
+.container2{
+    min-height: 600px;
+}
 .question{
-    margin-top: 40px;
+    margin-top: 20px;
     display: none;
+    margin: auto;
 
+}
+
+.instructions{
+    margin: 30px;
+    line-height: 1.6em;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.top{
+    height: 70px;
+
+}
+
+h3.verdict{
+    color: gold;
+}
+
+p.instructions{
+    font-size: 20px;
+}
+
+h2.instructions{
+    color: gold;
+    font-weight: bold;
 }
 
 .verdict{
     display: none;
 }
 
+.actual-question{
+    color: gold;
+    border-bottom: 1px gold dotted;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
 #header{
     margin-top: 20px;
     margin-bottom: 20px;
-    color: white;
+    color: gold;
 }
 
 h3{
@@ -34,13 +78,11 @@ h3{
 }
 
 .timer{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .answers{
     font-size: 25px;
-    margin-top: 10px;
-    margin-bottom: 20px;
     
 }
 
@@ -54,12 +96,17 @@ h3{
     font-weight: bolder;
     border-style: solid;
     border-color: navy;
-    border-width: 1px;
 
 }
 
 #result{
     margin-bottom: 20px;
+    color: gold;
+    font-weight: bold
+}
+
+.answer-container{
+    margin-top: 60px;
 }
 
 #reset-game{
